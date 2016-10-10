@@ -1,0 +1,312 @@
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .chosen-container {
+        width: 95px !important;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) { 
+    .header {
+        height: 4rem;
+    }
+    .icon {
+        display: none;
+    }
+    .events-row .event,
+    .events-row .event:first-child {
+        padding-left: 1.5rem;
+        max-width: 100%;
+        padding-bottom: 4rem;
+        margin-left: 0;
+        border-top: 0;
+        border-left: 3px solid #4A90E2;
+    }
+    .events-row .event {
+        padding-right: 0;
+    }
+    .events-row .event:first-child {
+        border-color: #62C6F1;
+        padding-top: 9rem;
+    }
+    .events-row {
+        display: block;
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+    .events-row .event .event-week,
+    .events-row .event .event-day {
+        margin-left: -1.3rem;
+        padding-left: 1.4rem;
+    }
+    .event-item {
+        width: 17.5rem;
+        display: inline-table;
+    }
+    .header .header-logo {
+        margin: 4px auto 0;
+        float: none;
+        text-align: center;
+    }
+    footer,
+    .header .menu-toggle,
+    footer .icon {
+        display: block;
+    }
+    .icon.icon-calendar {
+        left: 0;
+        border-left: 0;
+        top: auto;
+    }
+    .icon.icon-plus-squared {
+        left: 5rem;
+        top:auto;
+    }
+    .icon.icon-logout {
+        right:0;
+        bottom: 0;
+        left:auto;
+        border-right: 0;
+    }
+    .icon {
+        font-size: 2.3rem;
+        padding: 0.4rem 0;
+        width: 3.8rem;
+        height: 3.1rem;
+        border-bottom: 0;
+        bottom: 0;
+        text-align: center;
+    }
+    .icon-calendar {
+        font-size: 2.1rem;
+    }
+    .compact-mode .events-row .event:first-child,
+    .compact-mode.active .events-row .event:first-child {
+        padding-left: 1rem;
+    }
+    .compact-mode .events-row .event:first-child {
+        padding-top: 7rem;
+    }
+    .compact-mode .events-row .event {
+        padding: 0rem 1rem;
+        margin: 1rem 0;
+    }
+    .compact-mode .events-row .event .event-week:before {
+        left: -.6rem;
+    }
+    .events-row .event:last-child {
+        padding-bottom: 5rem;
+    }
+    .compact-mode .events-row .event .event-item:last-child {
+        margin-bottom: 4rem;
+    }
+    .icon.icon-calendar.active {
+        border-color: #16407d;
+    }
+    .icon.icon-plus-squared {
+        display: block !important;
+    }
+    .header-filter {
+        position: absolute;
+        width: 100%;
+        padding-top: 6rem;
+        display: none;
+    }
+    .header-filter .chosen-container {
+        display: block !important;
+        margin-bottom: 1rem;
+        width: 90% !important;
+        margin-left: 5%;
+    }
+    .chosen-container-active.chosen-with-drop .chosen-single {
+            border: 1px solid #fff;
+            box-shadow: none;
+            background: #16407d;
+    }
+    .overlay {
+        background: #fff;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .header {
+        height: 4rem;
+    }
+    .icon {
+        display: none;
+    }
+    .events-row .event,
+    .events-row .event:first-child {
+        padding-left: 1.5rem;
+        max-width: 100%;
+        padding-bottom: 3rem;
+        margin-left: 0;
+        border-top: 0;
+        border-left: 3px solid #4A90E2;
+    }
+    .events-row .event {
+        padding-right: 0;
+    }
+    .events-row .event:first-child {
+        border-color: #62C6F1;
+        padding-top: 9rem;
+    }
+    .events-row {
+        display: block;
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+    .events-row .event .event-week,
+    .events-row .event .event-day {
+        margin-left: -1.3rem;
+        padding-left: 1.4rem;
+    }
+    .event-item {
+        width: 17.5rem;
+        display: inline-table;
+    }
+    .header .header-logo {
+        margin: 4px auto 0;
+        float: none;
+        text-align: center;
+    }
+    footer,
+    .header .menu-toggle,
+    footer .icon {
+        display: block;
+    }
+    .icon.icon-calendar {
+        left: 0;
+        border-left: 0;
+        top: auto;
+    }
+    .icon.icon-plus-squared {
+        left: 5rem;
+        top:auto;
+    }
+    .icon.icon-logout {
+        right:0;
+        bottom: 0;
+        left:auto;
+        border-right: 0;
+    }
+    .icon {
+        font-size: 2.3rem;
+        padding: 0.4rem;
+        width: 3rem;
+        height: 3.1rem;
+        border-bottom: 0;
+        bottom: 0;
+    }
+    .icon.icon-plus-squared {
+        display: block !important;
+    }
+    .compact-mode .events-row .event:first-child,
+    .compact-mode.active .events-row .event:first-child {
+        padding-left: 1rem;
+    }
+    .compact-mode .events-row .event:first-child {
+        padding-top: 7rem;
+    }
+    .compact-mode .events-row .event {
+        padding: 0rem 1rem;
+        margin: 1rem 0;
+    }
+    .compact-mode .events-row .event .event-week:before {
+        left: -.6rem;
+    }
+    .events-row .event:last-child {
+        padding-bottom: 3rem;
+    }
+    .compact-mode .events-row .event .event-item:last-child {
+        margin-bottom: 4rem;
+    }
+    .icon.icon-calendar.active {
+        border-color: #16407d;
+    }
+    .overlay {
+        background: #fff;
+    }
+    .calendar {
+        transition: none;
+        border: 0;
+        z-index: 1001;
+        width: 100%;
+        left: 0;
+        padding: 0;
+    }
+    .calendar table {
+        margin-left: 0;
+        width: 100%;
+    }
+    .calendar thead td,
+    .calendar td {
+        width: 10%;
+        font-size: 1.5rem;
+        padding: 2% 0;
+    }
+    .switch {
+        display: none;
+    }
+    .calendar h2 {
+        margin-bottom: 3rem;
+    }
+    .header-filter {
+        position: absolute;
+        width: 100%;
+        padding-top: 6rem;
+        display: none;
+    }
+    .header-filter .chosen-container {
+        display: block !important;
+        margin-bottom: 1rem;
+        width: 90% !important;
+        margin-left: 5%;
+    }
+    .chosen-container-active.chosen-with-drop .chosen-single {
+            border: 1px solid #fff;
+            box-shadow: none;
+            background: #16407d;
+    }
+    .overlay-calendar {
+        background: #fff;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    body {
+        min-width: 320px;
+    }
+    .events-row .event {
+        padding-bottom: 3rem;
+    }
+    .events-row .event .event-item {
+        margin-bottom: 1rem;
+    }
+    .events-row .event .event-item .event-box .event-item--type {
+        display: none;
+    }
+    .events-row .event .event-item .event-box {
+        width: 10rem;
+    }
+    .event-item {
+        width: 11rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .header .header-logo {
+        background: url(../img/logo-md.png) no-repeat;
+        width: 217px;
+        height: 13px;
+        margin: 5px auto 0;
+    }
+    .icon.icon-plus-squared {
+        display: block !important;
+    }
+    .calendar thead td,
+    .calendar td {
+        padding: 0;
+    }
+}

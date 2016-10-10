@@ -1,0 +1,21 @@
+{
+  "name": "gulp",
+  "version": "0.0.1",
+  "description": "Gulp based",
+  "author": "Drupalspec",
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "connect-livereload": "~0.5.4",
+    "gulp": "^3.6.2",
+    "gulp-concat": "*",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jade": "~0.3.0",
+    "gulp-stylus": "^0.2.1",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "~2.2.12",
+    "imagemin-pngquant": "^4.0.0"
+  },
+  "dependencies": {
+    "chosen-npm": "^1.4.2"
+  }
+}
