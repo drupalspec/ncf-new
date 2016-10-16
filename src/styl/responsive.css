@@ -272,6 +272,17 @@
     .overlay-calendar {
         background: #fff;
     }
+    .popup.add-event {
+        width: 80%;
+        margin-left: -40%;
+    }
+    .popup.add-event .col-1, .popup.add-event .col-2 {
+        float: none;
+        width: 100%;
+    }
+    .popup.add-event .col-2 {
+        margin-left: 0;
+    }
 }
 
 /* Portrait phones and smaller */
