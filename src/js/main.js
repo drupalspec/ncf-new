@@ -84,6 +84,7 @@ $('.overlay').click(function() {
     $('body').removeClass('filter-active');
 });
 
+// Dynamic elements
 $(function() {
     var eventCount = $('.event-item--type span').length;
     var titleText = [
@@ -161,19 +162,24 @@ $(function() {
 
     $('.event-box').each(function(key, element){
         var newClass = randomClass[Math.floor(Math.random()*randomClass.length)];
-        // $(element).className();
         $(element).addClass(newClass);
     });
 
 // event popup
 $('.event-item').click(function() {
     $('.overlay').toggle();
-    $('.event-inner').show();
+    $('.event-inner').css('display','table');
     var title = $(this).find('.event-item--type span').text();
+    var subtitle = $(this).find('.event-description').text();
 
+    // change h1
     $('.event-inner h1').each(function(key,element){
         $(element).text(title);
-        
+    });
+
+    // change h2 
+    $('.event-inner .popup--right-column h2').each(function(key,element){
+        $(element).text(subtitle);
     });
 
 });

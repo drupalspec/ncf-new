@@ -410,7 +410,7 @@ footer
     padding 0 10px
     font-size 1.4rem
     
-legent
+legend
     font: 400 1.8rem/1.2 'Helvetica Neue Condensed',"Roboto Condensed",sans-serif;
     padding-bottom 2rem
     display: block
@@ -418,17 +418,27 @@ legent
 fieldset
     margin-bottom 1.5rem
     
+.popup-wrapper
+    display table
+    table-layout: fixed;
+    height 100%
+    width 100%
+    
 
 .popup 
     position fixed
     z-index 900
-    top 30%
     width 30rem
-    margin-left -15rem
-    left 50%
+    height 33rem
     border 1px solid #16407d
     display: none
     background #fff
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     
     form
         padding: 2.5rem 2rem 0;
@@ -500,14 +510,12 @@ fieldset
             
     &.add-event
         width 60rem
-        margin-left -30rem
         border 1px solid #ED4044
-        top 10%
         height 60rem
 
-        
         .popup--header
             background #ED4044
+            overflow hidden
             
         .col-1, .col-2 
             float left
@@ -519,16 +527,127 @@ fieldset
         .popup--content-scroller
             overflow-y: scroll;
             height 50rem
-            
+
     &.event-inner
-        display: none;
+        display none
+        table-layout: fixed;
         overflow: hidden;
-        margin-left -40rem
-        width: 80rem;
-        height: 60rem;
+        width: 90%;
+        height: 90%;
+        max-width: 80rem;
+        max-height: 60rem;
         background: #fff;
         top 10%
         
+        .close
+            position: absolute;
+            z-index: 10000;
+            top: 0;
+            right: 0;
+            line-height: 25px;
+            line-height: 2.5rem;
+            width: 25px;
+            width: 2.5rem;
+            cursor: pointer;
+            text-align: center;
+            font-family: Arial,sans-serif;
+            background: #fff;
+            background: rgba(255,255,255,.3);
+            color: #000;
+
+        .popup--header
+            height 2rem
+            overflow hidden
+            display: table-row;
+
+
+            .popup--left-column
+                background-color: #989FA3;
+                width: 23rem;
+                white-space: normal;
+                display: table-cell;
+
+                img
+                    height: 9rem;
+                    position: absolute;
+                    z-index: 1;
+                    top: 7rem;
+                    left: 10px;
+                    margin-top: -65px;
+
+            .popup--right-column
+                background-color: #16407D;
+                width 65rem 
+                display: table-cell;
+
+                h1
+                    padding: 3rem 2.5rem 1rem;
+
+        .popup--content
+            display: table-row;
+
+            .popup--left-column
+                display: table-cell;
+                width: 27rem;
+                
+                .popup--sidebar 
+                    padding: 3rem 2.5rem 11rem 1.5rem;
+                    box-sizing border-box
+                    
+                    p
+                        font-size: 1.2rem;
+                        line-height: 1.1;
+                        margin: 0 0 1em;
+                
+                .popup-tab--switcher 
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    font: 400 1.3rem/1.2 'Helvetica Neue Condensed',"Roboto Condensed",sans-serif;
+                    li
+                        margin: 0;
+                        padding: .8em 0 0 2rem;
+                        position: relative;
+                        cursor: pointer;
+                        
+                        &:before
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            content '';
+                            top: 1.1em;
+                            width: .8rem;
+                            height: .8rem;
+                            // background #E24343
+                            background #16407D
+                        &.active:before
+                            background #E24343
+
+
+            .popup--right-column
+                width 68rem 
+                display: table-cell;
+                padding: 0 2rem;
+                
+                &:before 
+                    position: absolute;
+                    top: 0;
+                    left: 22.9rem;
+                    bottom: 0;
+                    width: .7rem;
+                    content ''
+                    background: linear-gradient(to right,rgba(0,0,0,.1) 0,rgba(46,46,46,.25) 18%,rgba(255,255,255,0) 100%);
+                
+                p
+                    font-size 1.3rem
+                    
+                h2
+                    color: #2D72A0;
+                    font: 400 2.2rem/1.2 'Helvetica Neue Condensed',"Roboto Condensed",sans-serif;
+
+            
+
+
         .popup--footer
             opacity: 1;
             position: absolute;
@@ -568,63 +687,15 @@ fieldset
                 
                 i
                     float: right;
+                    
                 
-            
-        
-        
-        .popup--header
-            display: table;
-            height 2rem
-            padding 0
-            box-sizing border-box
-            
-        
-            .popup--left-column
-                background-color: #989FA3;
-                width: 29rem;
-                display: table-cell;
-                white-space: normal;
-                img
-                    height: 9rem;
-                    position: absolute;
-                    z-index: 1;
-                    top: 7rem;
-                    left: 10px;
-                    margin-top: -65px;
-            
-            .popup--right-column
-                background-color: #16407D;
-                display: table-cell;
-                width 68rem 
-                padding: 3rem 2.5rem 1rem;
-                box-sizing border-box
-                white-space: normal;
-                
-                
-        .popup--content
-            display: table
-            
-            .popup--left-column
-                display: table-cell;
-                width: 27rem;
-                
-
-                &:before 
-                    position: absolute;
-                    top: 0;
-                    left: 22.9rem;
-                    bottom: 0;
-                    width: .7rem;
-                    content ''
-                    background: linear-gradient(to right,rgba(0,0,0,.1) 0,rgba(46,46,46,.25) 18%,rgba(255,255,255,0) 100%);
-                   
-                
-            .popup--right-column
-                display: table-cell;
-                width 68rem 
-                overflow: auto;
-                padding: 0 2rem;
-                
+                // &:before 
+                //     position: absolute;
+                //     top: 0;
+                //     bottom: 0;
+                //     width: .7rem;
+                //     content ''
+                //     background: linear-gradient(to right,rgba(0,0,0,.1) 0,rgba(46,46,46,.25) 18%,rgba(255,255,255,0) 100%);
                 
                 p
                     font-size 1.3rem
@@ -658,11 +729,9 @@ fieldset
                            background #16407D
                        &.active:before
                            background #E24343
-               
-                
+
             .popup--sidebar 
                 padding: 3rem 2.5rem 11rem 1.5rem;
-                box-sizing border-box
                 
                 p
                     font-size: 1.2rem;
@@ -685,7 +754,6 @@ fieldset
        position: relative;
        color red
        cursor pointer
-
 
 
 
